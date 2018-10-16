@@ -59,24 +59,22 @@ $("#button").click(function(){
   var n4 = parseInt($("#note4").val());
   var n5 = parseInt($("#note5").val());
   var moy = (n1+n2+n3+n4+n5)/5;
-  console.log(moy);
 
   if(moy < 10){
     alert("Votre moyenne est de " + moy + " sur 20.\nEn dessous de la moyenne")
-  }
+    }
     else if(10 <= moy && moy < 13){
       alert("Votre moyenne est de " + moy + " sur 20.\nMoyen")
-    }
+      }
       else if(13 <= moy && moy< 16){
          alert("Votre moyenne est de " + moy + " sur 20.\nBien")
-      }
+         }
         else if(16 <= moy && moy < 20){
           alert("Votre moyenne est de " + moy + " sur 20.\nTrès bien")
-        }
+          }
           else if(moy == 20){
             alert("Votre moyenne est de " + moy + " sur 20.\nExcellent")
-          }
-  // alert("Votre moyenne est de " + moy + " sur 20.")
+            }
 })
 
 </script>
