@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 2 JQuery - Partie 4</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="jquery-3.2.1.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="exercice">
+    <h1>Exercice 2 JQuery - Partie 4</h1>
+    <p>Demander à l'aide d'un formulaire les 5 dernières notes d'un élève.
+    </br>Calculer sa moyenne et déterminer son appréciation.
+      <ul>
+        <li>Si la moyenne de l'élève est supérieure ou égale à 0 et inférieure à 10,
+           il aura comme appréciation : "En dessous de la moyenne".</li>
+        <li>Si la moyenne de l'élève est supérieure ou égale à 10 et inférieure à 13,
+           il aura comme appréciation : "Moyen".</li>
+        <li>Si la moyenne de l'élève est supérieure ou égale à 13 et inférieure à 16,
+           il aura comme appréciation : "Bien".</li>
+        <li>Si la moyenne de l'élève est supérieure ou égale à 16 et inférieure à 20,
+           il aura comme appréciation : "Très bien".</li>
+        <li>Si la moyenne de l'élève est égale à 20, il aura comme appréciation : "Excellent".</li>
+     </ul>
+      Afficher la moyenne et l'appréciation de l'élève.</p>
+  </div>
+
+  <div class="exo">
+    <form id="notes">
+      <label>Français :</label>
+      <input type="number" id="note1" min="0" max="20">
+
+      <label>Mathématiques :</label>
+      <input type="number" id="note2" min="0" max="20">
+
+      <label>Anglais LV1 :</label>
+      <input type="number" id="note3" min="0" max="20">
+
+      <label>Histoire/Géographie :</label>
+      <input type="number" id="note4" min="0" max="20">
+
+      <label>E.P.S :</label>
+      <input type="number" id="note5" min="0" max="20">
+
+    <button type="button" id="button">Calcul de la moyenne</button>
+    </form>
+    </div>
+<script>
+// var regexNumber =
+
+
+
+$("#button").click(function(){
+  var n1 = parseInt($("#note1").val());
+  var n2 = parseInt($("#note2").val());
+  var n3 = parseInt($("#note3").val());
+  var n4 = parseInt($("#note4").val());
+  var n5 = parseInt($("#note5").val());
+  var moy = (n1+n2+n3+n4+n5)/5;
+  console.log(moy);
+
+  if(moy < 10){
+    alert("Votre moyenne est de " + moy + " sur 20.\nEn dessous de la moyenne")
+  }
+    else if(10 <= moy && moy < 13){
+      alert("Votre moyenne est de " + moy + " sur 20.\nMoyen")
+    }
+      else if(13 <= moy && moy< 16){
+         alert("Votre moyenne est de " + moy + " sur 20.\nBien")
+      }
+        else if(16 <= moy && moy < 20){
+          alert("Votre moyenne est de " + moy + " sur 20.\nTrès bien")
+        }
+          else if(moy == 20){
+            alert("Votre moyenne est de " + moy + " sur 20.\nExcellent")
+          }
+  // alert("Votre moyenne est de " + moy + " sur 20.")
+})
+
+</script>
+
+</body>
+
+<footer>
+<p>Exercices réalisés à
+<a href="https://lamanu.fr/le-havre">LaManu</a></p>
+</footer>
+</html>
